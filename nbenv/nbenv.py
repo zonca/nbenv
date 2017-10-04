@@ -57,11 +57,13 @@ def create_conda_environment(env_name,
 
 def install_ipykernel(env_name, kernel_display_name):
     """Install an IPython kernel for the conda environment"""
-    subprocess.run(
-        "python -m ipykernel install --user".split() +
-        ["--name", env_name,
-         "--display-name", kernel_display_name],
-        check=True)
+    subprocess.run((
+        "bash -c \"source activate {env_name};" +
+        "python -m ipykernel install --user" +
+        " --name {env_name}" +
+        " --display-name '{kernel_display_name}'\""
+        ).format(env_name=env_name, kernel_display_name=kernel_display_name),
+        check=True, shell=True)
 
 
 def create_conda_env_from_notebook(notebook_filename,
