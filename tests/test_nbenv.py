@@ -16,13 +16,13 @@ TEST_ENV_INPUT_NAME = "nbenv_test_input_env"
 def setup_conda_environment():
     conda_package_list = os.path.join(os.path.dirname(__file__),
                                       "test_conda_list.txt")
-    subprocess.run(["conda", "create", "--yes", "--name", TEST_ENV_INPUT_NAME,
+    subprocess.run(["conda", "env", "create", "--name", TEST_ENV_INPUT_NAME,
                     "--file", conda_package_list], check=True)
 
 def test_fixture(setup_conda_environment):
     """Check that the conda environment was created successfully"""
-    test_conda_env_package_list = \
-        subprocess.check_output(["conda", "list", "--export", "--name", TEST_ENV_INPUT_NAME])
+    test_environment = \
+        subprocess.check_output(["conda", "env", "export", "--name", TEST_ENV_INPUT_NAME])
     #TODO compare outputs
 
 

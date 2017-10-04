@@ -7,4 +7,4 @@ __email__ = 'code@andreazonca.com'
 __version__ = '0.1.0'
 
 from .nbenv import create_conda_env_from_notebook
-from .hooks import save_conda_package_list
+from .hooks import save_conda_environment

@@ -3,7 +3,7 @@
 """Console script for nbenv."""
 
 import argparse
-from .nbenv import extract_and_write_package_list, create_conda_env_from_notebook
+from .nbenv import extract_and_write_environment, create_conda_env_from_notebook
 
 import sys
 
@@ -24,12 +24,14 @@ def main():
         help="Input notebook saved with the nbenv pre save hook")
     parser.add_argument("--extract", action='store_true',
         help="Only dump the package list to stdout")
+    parser.add_argument("other_conda_create_args", nargs=argparse.REMAINDER,
+        help="Additional arguments for conda env create, like --name or --force")
     args = parser.parse_args()
 
     if args.extract:
-        extract_and_write_package_list(args.notebook_filename)
+        extract_and_write_environment(args.notebook_filename)
     else:
-        create_conda_env_from_notebook(args.notebook_filename)
+        create_conda_env_from_notebook(args.notebook_filename, extra_args=args.other_conda_create_args)
 
 
 if __name__ == "__main__":
