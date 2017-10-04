@@ -2,15 +2,34 @@
 
 """Console script for nbenv."""
 
-import click
+import argparse
+from .nbenv import extract_and_write_package_list, create_conda_env_from_notebook
+
+import sys
 
 
-@click.command()
-def main(args=None):
+class PrintHelpOnErrorParser(argparse.ArgumentParser):
+    def error(self, message):
+        sys.stderr.write('error: %s\n' % message)
+        self.print_help()
+        sys.exit(2)
+
+def main():
     """Console script for nbenv."""
-    click.echo("Replace this message by putting your code into "
-               "nbenv.cli.main")
-    click.echo("See click documentation at http://click.pocoo.org/")
+
+    parser = PrintHelpOnErrorParser(
+        description="Create a conda env from a package list stored in Notebook metadata"
+    )
+    parser.add_argument("notebook_filename",
+        help="Input notebook saved with the nbenv pre save hook")
+    parser.add_argument("--extract", action='store_true',
+        help="Only dump the package list to stdout")
+    args = parser.parse_args()
+
+    if args.extract:
+        extract_and_write_package_list(args.notebook_filename)
+    else:
+        create_conda_env_from_notebook(args.notebook_filename)
 
 
 if __name__ == "__main__":
