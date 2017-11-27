@@ -9,15 +9,6 @@ nbenv
 .. image:: https://img.shields.io/travis/zonca/nbenv.svg
         :target: https://travis-ci.org/zonca/nbenv
 
-.. image:: https://readthedocs.org/projects/nbenv/badge/?version=latest
-        :target: https://nbenv.readthedocs.io/en/latest/?badge=latest
-        :alt: Documentation Status
-
-.. image:: https://pyup.io/repos/github/zonca/nbenv/shield.svg
-     :target: https://pyup.io/repos/github/zonca/nbenv/
-     :alt: Updates
-
-
 Store conda environment package list inside Notebook documents
 
 This package provides a hook for the Jupyter Notebook that saves metadata about the
