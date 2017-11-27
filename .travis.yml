@@ -49,7 +49,7 @@ deploy:
       K1pGUHE3QTBleW50c2FjV1NpRXcxN2oyVUNhY2dLaDRkdkhmY3g2UFJySGxWLzNhTDZHYnJXT0pQ
       ZGtXRnlVTnpWTlNTVElGcEUwRjlONFpwL0ZaUU40SFhjZXlxZVNTb2RLOG42bXlvQmtJQUYydmFy
       Vm1xR2F5eUhnVnJ3T3hCZVBxOU5kSkY3TDg3SVlUY1pRZkdEdzBsSVlZTTlPdkVUampVQ3NyUlE9
-    on:
-        tags: true
-    repo: zonca/nbenv
-    python: 3.6
+  on:
+    tags: true
+  repo: zonca/nbenv
+  python: 3.6
