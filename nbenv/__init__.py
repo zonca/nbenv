@@ -4,7 +4,7 @@
 
 __author__ = """Andrea Zonca"""
 __email__ = 'code@andreazonca.com'
-__version__ = '0.1.0'
+__version__ = '0.1.2'
 
 from .nbenv import create_conda_env_from_notebook
 from .hooks import save_conda_environment
