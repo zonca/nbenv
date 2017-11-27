@@ -39,12 +39,13 @@ it ran:
       - ipython-genutils==0.2.0
       - jupyter-client==5.1.0
 
-And re-create the same environment:
+And re-create the same environment (includes install of IPython Kernel):
 
 .. code-block:: bash
 
     $ nbenv my_notebook.ipynb --name reconstructed_env
     $ source activate reconstructed_env
+    $ jupyter notebook
 
 The environment metadata will be preserved if the Notebook file is modified by a Jupyter Notebook session
 with no ``nbenv`` installed.
