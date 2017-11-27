@@ -55,6 +55,9 @@ And re-create the same environment:
     $ nbenv my_notebook.ipynb --name reconstructed_env
     $ source activate reconstructed_env
 
+The environment metadata will be preserved if the Notebook file is modified by a Jupyter Notebook session
+with no ``nbenv`` installed.
+
 Install
 --------
 
