@@ -34,10 +34,21 @@ script: py.test -v
 deploy:
   provider: pypi
   distributions: sdist bdist_wheel
-  user: andreazonca
+  user: andreazonca.myopenid.com
   password:
-    secure: PLEASE_REPLACE_ME
-  on:
+    secure: !!binary |
+      QlczYVhUUXZ3RXFQSzVRcDlqUkhtQU9xcEdGYm45N1NpV2dveGRsWXZGZWhGbEVWTkNVK3hTcXRQ
+      SzlGRmYweTVaOWsxdFdLSS9Kb2FpbUVITmZ2VUtQeldkNnV2SFFxSUJxY2xJTm9OdjNVd2JveFNJ
+      allLRnlhYnI1dSt5eUlxb0JGUnpzcXdzVHN4dUtSbHBoS0lzY2FIV1VraUVSTGQrc2xzNUtiSVo4
+      R1ZWSjVaVDNWNDl4aXlPM1ZTWVpjMTZqVmFXMXp1cDBBOU5jcEZObWVkdmdZREZYZm02dlJwWG9M
+      OW10M2UzR1VPTXpORkJhQUEvalg3VW1UdDQwWlkrb2JCZndPMlR0QXltWE51SGFXNnRTR1dxV29L
+      OEtZdEtZTElKMnZuekhCUlFCSEswdm4zdko4bUY0NXpRN0ZqTXA0bUN0N3JGVzBCVGV2bzNNdkFJ
+      T2ZvbDg5Q3BjQi92Uy9aWFdKWFNna3FCc001VTZZQ2FHbFlpQnlMNnJ4T2thNElvTVVtVWllK0l4
+      Ny9WWXAya3N3ODlOS0Y0aEdKRk1rTS83bTdwSE1KenVQWUE1bU00Mm9lSHc5ZkRNVzczSitaUTZk
+      cmJVa3ZjNDlPQmpySUhPZTJYR2VqMzZEcmthdG1oa2dkUGhVVy9WR3hzOUpxeXRVVGZIVy96d0pE
+      K1pGUHE3QTBleW50c2FjV1NpRXcxN2oyVUNhY2dLaDRkdkhmY3g2UFJySGxWLzNhTDZHYnJXT0pQ
+      ZGtXRnlVTnpWTlNTVElGcEUwRjlONFpwL0ZaUU40SFhjZXlxZVNTb2RLOG42bXlvQmtJQUYydmFy
+      Vm1xR2F5eUhnVnJ3T3hCZVBxOU5kSkY3TDg3SVlUY1pRZkdEdzBsSVlZTTlPdkVUampVQ3NyUlE9
     tags: true
     repo: zonca/nbenv
-    python: 2.7
+    python: 3.6
