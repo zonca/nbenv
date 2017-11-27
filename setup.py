@@ -23,7 +23,7 @@ test_requirements = [
 
 setup(
     name='nbenv',
-    version='0.1.3',
+    version='0.1.4',
     description="Store conda environment package list inside Notebook documents",
     long_description=readme,
     author="Andrea Zonca",
