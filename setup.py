@@ -8,9 +8,6 @@ from setuptools import setup, find_packages
 with open('README.rst') as readme_file:
     readme = readme_file.read()
 
-with open('HISTORY.rst') as history_file:
-    history = history_file.read()
-
 requirements = [
     'nbformat',
     'jupyter_client'
@@ -28,7 +25,7 @@ setup(
     name='nbenv',
     version='0.1.0',
     description="Store conda environment package list inside Notebook documents",
-    long_description=readme + '\n\n' + history,
+    long_description=readme,
     author="Andrea Zonca",
     author_email='code@andreazonca.com',
     url='https://github.com/zonca/nbenv',
